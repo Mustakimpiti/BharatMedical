@@ -1,0 +1,167 @@
+﻿<%@ Master Language="VB" CodeFile="user.master.vb" Inherits="user_user" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Bharat Medical </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,700|Crimson+Text:400,400i" rel="stylesheet">
+    <link rel="stylesheet" href="../user/fonts/icomoon/style.css">
+    <link rel="stylesheet" href="../user/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../user/css/magnific-popup.css">
+    <link rel="stylesheet" href="../user/css/jquery-ui.css">
+    <link rel="stylesheet" href="../user/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../user/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../user/css/aos.css">
+    <link rel="stylesheet" href="../user/css/style.css">
+    <script nonce="77f451dd-a87e-4fed-ae35-bd7908afd3b0">(function (w, d) { !function (cM, cN, cO, cP) { cM.zarazData = cM.zarazData || {}; cM.zarazData.executed = []; cM.zaraz = { deferred: [], listeners: [] }; cM.zaraz.q = []; cM.zaraz._f = function (cQ) { return function () { var cR = Array.prototype.slice.call(arguments); cM.zaraz.q.push({ m: cQ, a: cR }) } }; for (const cS of ["track", "set", "debug"]) cM.zaraz[cS] = cM.zaraz._f(cS); cM.zaraz.init = () => { var cT = cN.getElementsByTagName(cP)[0], cU = cN.createElement(cP), cV = cN.getElementsByTagName("title")[0]; cV && (cM.zarazData.t = cN.getElementsByTagName("title")[0].text); cM.zarazData.x = Math.random(); cM.zarazData.w = cM.screen.width; cM.zarazData.h = cM.screen.height; cM.zarazData.j = cM.innerHeight; cM.zarazData.e = cM.innerWidth; cM.zarazData.l = cM.location.href; cM.zarazData.r = cN.referrer; cM.zarazData.k = cM.screen.colorDepth; cM.zarazData.n = cN.characterSet; cM.zarazData.o = (new Date).getTimezoneOffset(); if (cM.dataLayer) for (const cZ of Object.entries(Object.entries(dataLayer).reduce(((c_, da) => ({ ...c_[1], ...da[1] }))))) zaraz.set(cZ[0], cZ[1], { scope: "page" }); cM.zarazData.q = []; for (; cM.zaraz.q.length;) { const db = cM.zaraz.q.shift(); cM.zarazData.q.push(db) } cU.defer = !0; for (const dc of [localStorage, sessionStorage]) Object.keys(dc || {}).filter((de => de.startsWith("_zaraz_"))).forEach((dd => { try { cM.zarazData["z_" + dd.slice(7)] = JSON.parse(dc.getItem(dd)) } catch { cM.zarazData["z_" + dd.slice(7)] = dc.getItem(dd) } })); cU.referrerPolicy = "origin"; cU.src = "../../cdn-cgi/zaraz/sd0d9.js?z=" + btoa(encodeURIComponent(JSON.stringify(cM.zarazData))); cT.parentNode.insertBefore(cU, cT) };["complete", "interactive"].includes(cN.readyState) ? zaraz.init() : cM.addEventListener("DOMContentLoaded", zaraz.init) }(w, d, 0, "script"); })(window, document);
+
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="site-wrap">
+            <div class="site-navbar py-2">
+                <%--<div class="search-wrap">
+                    <div class="container">
+                        <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
+                        <div>
+                            <input type="text" class="form-control" placeholder="Search keyword and hit enter...">
+                        </div>
+                    </div>
+                </div>--%>
+                <div class="container">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="logo">
+                            <div class="site-logo">
+                                <a href="Home.aspx" class="js-logo-clone">
+                                    <img class="brand" height="100" width="180" src="/Admin/assets/img/main.png" alt="bootstraper logo"></a>
+                            </div>
+                        </div>
+                        <div class="main-nav d-none d-lg-block">
+                            <nav class="site-navigation text-right text-md-center" role="navigation">
+                                <ul class="site-menu js-clone-nav d-none d-lg-block">
+                                    <li><a href="Home.aspx">Home</a></li>
+                                    <li><a href="shop.aspx">Store</a></li>
+                                    <li class="has-children">
+                                        <a href="#">Category</a>
+                                        <ul class="dropdown">
+                                            <li><a href="standard.aspx">Standard</a></li>
+                                            <li><a href="Genaric.aspx">Genaric</a></li>
+
+                                        </ul>
+                                    </li>
+                                    <%--<li class="has-children">
+                                        <a href="#">Types</a>
+                                        <ul class="dropdown">
+                                            <li><a href="Antibiotics.aspx">Antibiotics</a></li>
+                                            <li><a href="vitamins.aspx">Vitamins</a></li>
+                                            <li><a href="acidity.aspx">Acidity / Antacide</a></li>
+                                            <li><a href="painkiller.aspx">Pain Killer</a></li>
+                                            <li><a href="cold.aspx">Cold Cough</a></li>
+
+                                        </ul>
+                                    </li>--%>
+                                    <li><a href="about.aspx">About</a></li>
+                                    <li><a href="contact.aspx">Contact</a></li>
+                                    <li><a>
+                                        <asp:LinkButton ID="lbsignin" runat="server" Text="Signin"></asp:LinkButton></a></li>
+                                    <li><a>
+                                        <asp:LinkButton ID="lblogout" runat="server" Text="Signout"></asp:LinkButton></a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="icons">
+                            <a href="cart.aspx" class="icons-btn d-inline-block bag">
+                                <span class="icon-shopping-bag"></span>
+
+                            </a>
+                            <a>
+                                <asp:LinkButton ID="LinkButton1" CssClass="icon-user-circle" runat="server"></asp:LinkButton>
+
+                            </a>
+
+                            <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span class="icon-menu"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+
+            <footer class="site-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+                            <div class="block-7">
+                                <h3 class="footer-heading mb-4">About Us</h3>
+                                <p>
+                                    A good physician advises you to take proper medicine , We are the ones who will help you to take proper medicine.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 mx-auto mb-5 mb-lg-0">
+                            <h3 class="footer-heading mb-4">Quick Links</h3>
+                            <ul class="list-unstyled">
+                                <li><a href="Antibiotics.aspx">Antibiotics</a></li>
+                                <li><a href="vitamins.aspx">Vitamins</a></li>
+                                <li><a href="acidity.aspx">Acidity / Antacide</a></li>
+                                <li><a href="painkiller.aspx">Pain Killer</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="block-5 mb-5">
+                                <h3 class="footer-heading mb-4">Contact Info</h3>
+                                <ul class="list-unstyled">
+
+                                    <li class="address">Jawahar Bazaar . Near Dr Mahesh Benker Clinic, Mahemdavad Kheda, Gujarat 387130</li>
+                                    <li class="phone"><a href="tel://23923929210">+91 932 37421 26</a></li>
+                                    <li class="email"><a href="https://preview.colorlib.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="82e7efe3ebeee3e6e6f0e7f1f1c2e6edefe3ebecace1edef">bharatmedicalstoremahemdavad@gmail.com</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <%-- <div class="row pt-5 mt-5 text-center">
+                        <div class="col-md-12">
+                            <p>
+                                Copyright &copy;
+                                <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+                                <script>document.write(new Date().getFullYear());</script>
+                                All rights reserved | This template is made
+with <i class="icon-heart" aria-hidden="true"></i>by <a href="https://colorlib.com/" target="_blank" class="text-primary">Colorlib</a>
+
+                            </p>
+                        </div>
+                    </div>--%>
+                </div>
+            </footer>
+        </div>
+
+
+
+        <script src="../user/js/jquery-3.3.1.min.js"></script>
+        <script src="../user/js/jquery-ui.js"></script>
+        <script src="../user/js/popper.min.js"></script>
+        <script src="../user/js/bootstrap.min.js"></script>
+        <script src="../user/js/owl.carousel.min.js"></script>
+        <script src="../user/js/jquery.magnific-popup.min.js"></script>
+        <script src="../user/js/aos.js"></script>
+        <script src="../user/js/main.js"></script>
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-23581568-13');
+        </script>
+        <script defer src="https://static.cloudflareinsights.com/beacon.min.../user/js/vaafb692b2aea4879b33c060e79fe94621666317369993" integrity="sha512-0ahDYl866UMhKuYcW078ScMalXqtFJggm7TmlUtp0UlD4eQk0Ixfnm5ykXKvGJNFjLMoortdseTfsRT8oCfgGA==" data-cf-beacon='{"rayId":"776b2d7cdc00f3f5","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2022.11.3","si":100}' crossorigin="anonymous"></script>
+    </form>
+</body>
+</html>
